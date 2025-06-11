@@ -13,13 +13,14 @@ Pod::Spec.new do |s|
   s.author           = { 'Ilyes Djari' => 'ilyes.djari@icapps.com' }
   s.source           = { :git => 'https://github.com/IlyesDjari/mapbox-directions-swift.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '15.0'
+  s.ios.deployment_target = '15.6'
   s.pod_target_xcconfig = {
-    'IPHONEOS_DEPLOYMENT_TARGET' => '15.0'
+    'IPHONEOS_DEPLOYMENT_TARGET' => '15.6'
   }
 
   s.source_files     = 'MapboxDirections/**/*.{swift,h,m}', 'MapboxDirectionsObjc/**/*.{h,m}'
   s.public_header_files = 'MapboxDirectionsObjc/include/MapboxDirections.h'
+  s.module_map = 'MapboxDirectionsObjc/module.modulemap'
   s.resources        = 'MapboxDirectionsTests/resources/**/*'
 
   s.dependency 'Polyline', '5.1.0'
